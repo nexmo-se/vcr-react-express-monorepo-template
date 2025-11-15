@@ -1,7 +1,7 @@
 project:
-  name: epic-call-app-frontend
+  name: vcr-react-express-monorepo-template-frontend
 instance:
-  name: dev
+  name: frontend
   runtime: nodejs22
   region: aws.use1
   build-script: "./vcrBuild.sh"

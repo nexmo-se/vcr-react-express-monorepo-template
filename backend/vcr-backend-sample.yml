@@ -1,7 +1,7 @@
 project:
-  name: epic-call-app-backend
+  name: vcr-react-express-monorepo-template-backend
 instance:
-  name: dev
+  name: backend
   runtime: nodejs22
   region: aws.use1
   application-id: XXXX
@@ -12,7 +12,7 @@ instance:
     - node
     - index.js
 debug:
-  name: debug
+  name: backend
   application-id: XXXX
   entrypoint:
     - nodemon
