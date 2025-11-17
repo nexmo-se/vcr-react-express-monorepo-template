@@ -103,6 +103,7 @@ Note the deployed backend URL.
 │   ├── vcr.yml               # Backend VCR configuration
 │   └── package.json
 ├── frontend/
+│   ├── .env                  # Frontend environment BACKEND_URL variable
 │   ├── src/
 │   │   └── App.js            # React application
 │   ├── vcr.yml               # Frontend VCR configuration
