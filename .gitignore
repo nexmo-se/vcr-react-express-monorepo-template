@@ -140,3 +140,4 @@ dist
 .pnp.*
 backend/vcr.yml
 frontend/vcr.yml
+.vcr-env-sample.json

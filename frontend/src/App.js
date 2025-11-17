@@ -12,11 +12,8 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "./App.css";
 
-const BACKEND_URL =
-  process.env.NODE_ENV === "production"
-    ? "https://neru-4f2ff535-epic-call-app-backend-dev.use1.runtime.vonage.cloud"
-    : "";
-
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
+console.log(`BACKEND_URL: ${BACKEND_URL}`);
 function App() {
   const [responses, setResponses] = useState([]);
   const [loading, setLoading] = useState(false);

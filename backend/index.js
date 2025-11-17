@@ -25,14 +25,15 @@ const session = vcr.createSession();
 const assets = new Assets(vcr.getGlobalSession());
 const state = new State(vcr.getGlobalSession());
 
+// Get VCR environment variables
+console.log(process.env);
+
 // Get the VCR instance service name from the environment
-const instanceServiceName = process.env.INSTANCE_SERVICE_NAME;
-let VCR_URL = "";
-if (instanceServiceName) {
-  VCR_URL = `https://${instanceServiceName}.use1.runtime.vonage.cloud`;
-  console.log("VCR_URL:", VCR_URL);
+const VCR_INSTANCE_PUBLIC_URL = process.env.VCR_INSTANCE_PUBLIC_URL;
+if (VCR_INSTANCE_PUBLIC_URL) {
+  console.log("VCR_INSTANCE_PUBLIC_URL:", VCR_INSTANCE_PUBLIC_URL);
 } else {
-  console.log("INSTANCE_SERVICE_NAME not set in environment.");
+  console.log("VCR_INSTANCE_PUBLIC_URL not set in environment.");
 }
 
 app.use(express.json());

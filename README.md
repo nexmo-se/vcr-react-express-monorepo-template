@@ -28,19 +28,31 @@ Each application has its own `vcr.yml` configuration file and must be run and de
 
 2. **Initialize VCR applications** in both directories:
 
-   ```bash
+   ```javascript
    # In frontend directory
    cd frontend
    vcr init
+   # skip Starter templates selection, then copy yml configurations from yml samples for both yml files.
 
    # In backend directory
    cd backend
    vcr init
+   # skip Starter templates selection, then copy yml configurations from yml samples for both yml files.
    ```
 
 3. **Configure VCR files** using the provided samples as reference:
+
    - `vcr-frontend-sample.yml`
    - `vcr-backend-sample.yml`
+
+4. **Configure frontend environment variables**
+   - Copy `.env.sample` to `.env` in the `/frontend` directory
+   - Set `REACT_APP_BACKEND_URL` to your backend URL
+   - Example:
+     ```bash
+     cp frontend/.env.sample frontend/.env
+     # Edit frontend/.env and set REACT_APP_BACKEND_URL
+     ```
 
 ## Local Development
 
